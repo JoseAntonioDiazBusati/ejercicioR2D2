@@ -1,0 +1,3 @@
+enum class Direccion {
+    POSITIVEX, POSITIVEY, NEGATIVEx, NEGATIVEY
+}
