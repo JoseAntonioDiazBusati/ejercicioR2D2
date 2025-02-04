@@ -16,13 +16,13 @@ No te olvides lo aprendido en las primeras unidades. Estructura condicionales, r
 fun main() {
     val r2d2 = Robot("R2D2")
     val movimientosRealizados: Array<Array<Int>> = arrayOf(
-        arrayOf(10, 5, -2),
-        arrayOf(0, 0, 0),
+        arrayOf(1, -5, 0, -9),
+        arrayOf(3, 3, 5, 6, 1, 0, 0, -7),
+        arrayOf(2, 1, 0, -1, 1, 1, -4),
         arrayOf(),
-        arrayOf(-10, -5, 2),
-        arrayOf(-10, -5, 2, 4, -8)
+        arrayOf(3, 5)
     )
-    for (movimiento in movimientosRealizados){//Hay un fallo en la clase robot o en el bucle que hace que se acumule el movimiento por array.
+    for (movimiento in movimientosRealizados){
         r2d2.mover(movimiento)
         println(r2d2)
     }
@@ -30,16 +30,17 @@ fun main() {
 /*
 -Tras los siguientes movimientos:
 
-    [10, 5, -2]
-    [0, 0, 0]
-    []
-    [-10, -5, 2]
-    [-10, -5, 2, 4, -8]
+    [1, -5, 0, -9],
+    [3, 3, 5, 6, 1, 0, 0, -7],
+    [2, 1, 0, -1, 1, 1, -4],
+    [],
+    [3, 5]
 
 -Las salidas son estas:
-    x: -5, y: 12, direction: POSITIVEX
-    x: 0, y: 0, direction: POSITIVEX
-    x: 0, y: 0, direction: POSITIVEY
-    x: 5, y: -12, direction: POSITIVEX
-    x: 9, y: -20, direction: NEGATIVEX
+
+    R2D2 está en (-4, 1) PositiveY
+    R2D2 está en (-8, 0) PositiveY
+    R2D2 está en (-11, 7) PositiveX
+    R2D2 está en (-11, 7) PositiveX
+    R2D2 está en (-8, 12) NegativeX
 */

@@ -35,6 +35,6 @@ class Robot (val nombre: String) {
     }
 
     override fun toString(): String {
-        return "$nombre está en ($posX, $posY) $direccion"
+        return "$nombre está en (x: $posX, y: $posY), direccion: $direccion"
     }
 }
