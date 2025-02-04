@@ -22,7 +22,7 @@ fun main() {
         arrayOf(-10, -5, 2),
         arrayOf(-10, -5, 2, 4, -8)
     )
-    for (movimiento in movimientosRealizados){
+    for (movimiento in movimientosRealizados){//Hay un fallo en la clase robot o en el bucle que hace que se acumule el movimiento por array.
         r2d2.mover(movimiento)
         println(r2d2)
     }
