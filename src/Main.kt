@@ -14,7 +14,18 @@ No te olvides lo aprendido en las primeras unidades. Estructura condicionales, r
 */
 
 fun main() {
-    val r2d2 = "String"
+    val r2d2 = Robot("R2D2")
+    val movimientosRealizados: Array<Array<Int>> = arrayOf(
+        arrayOf(10, 5, -2),
+        arrayOf(0, 0, 0),
+        arrayOf(),
+        arrayOf(-10, -5, 2),
+        arrayOf(-10, -5, 2, 4, -8)
+    )
+    for (movimiento in movimientosRealizados){
+        r2d2.mover(movimiento)
+        println(r2d2)
+    }
 }
 /*
 -Tras los siguientes movimientos:
